@@ -21,7 +21,7 @@ const searchBtn = document.querySelector("[data-search-btn]");
 
 searchBtn.addEventListener("click", function() {
   searchContainer.classList.toggle("active")
-} )
+})
 
 // whishlist & cart toggle
 
