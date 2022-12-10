@@ -19,9 +19,9 @@ for (let i = 0; i < navElems.length; i++) {
 const searchContainer = document.querySelector("[data-search-wrapper]");
 const searchBtn = document.querySelector("[data-search-btn]");
 
-searchBtn.addEventListener("click", function() {
-  searchContainer.classList.toggle("active")
-})
+searchBtn.addEventListener("click", function () {
+  searchContainer.classList.toggle("active");
+});
 
 // whishlist & cart toggle
 
@@ -30,27 +30,24 @@ const sidePanels = document.querySelectorAll("[data-side-panel]");
 
 for (let i = 0; i < panelBtns.length; i++) {
   panelBtns[i].addEventListener("click", function () {
-    
     let clickedElemDataValue = this.dataset.panelBtn;
 
     for (let i = 0; i < sidePanels.length; i++) {
-
-      if(clickedElemDataValue === sidePanels[i].dataset.sidePanel) {
-        sidePanels[i].classList.toggle("active")
-      }else {
-        sidePanels[i].classList.remove('active')
+      if (clickedElemDataValue === sidePanels[i].dataset.sidePanel) {
+        sidePanels[i].classList.toggle("active");
+      } else {
+        sidePanels[i].classList.remove("active");
       }
     }
-    
-  })
+  });
 }
 
+// back to top
 
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-
-
-
-
-
-
-
+window.addEventListener("scroll", function () {
+  window.scrollY >= 100
+    ? backTopBtn.classList.add("active")
+    : backTopBtn.classList.remove("active");
+});
